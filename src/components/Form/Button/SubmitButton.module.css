@@ -1,0 +1,19 @@
+.btn {
+  background-color: #222;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  padding: 0.7em 1.2em;
+  text-decoration: none;
+  transition: 0.5s;
+  width: 100%;
+}
+
+.btn:disabled {
+  background-color: grey;
+}
+
+.btn:enabled:hover {
+  color: #2fc18c;
+}

@@ -1,0 +1,13 @@
+.main {
+  align-items: center;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.main form {
+  border: 1px solid #7b7b7b;
+  border-radius: 3px;
+  padding: 2em 3em;
+}

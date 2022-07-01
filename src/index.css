@@ -17,3 +17,9 @@ code {
   display: flex;
   justify-content: center;
 }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
