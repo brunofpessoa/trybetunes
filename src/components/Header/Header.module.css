@@ -29,3 +29,38 @@
   border-radius: 50%;
   padding: 5px;
 }
+
+.nav_list {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+.list_item {
+  flex-grow: 1;
+  list-style-type: none;
+  text-align: center;
+}
+
+.list_item a {
+  display: block;
+  font-weight: 700;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.inactive {
+  background-color: #f0f2f5;
+  box-shadow: 0 2px 5px grey;
+  color: #2fc18c;
+  padding: 100px;
+}
+
+.active {
+  background-color: #036b52;
+  box-shadow: 0 2px 5px #2fc18c;
+  color: white;
+}

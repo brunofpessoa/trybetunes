@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaUser } from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
 import styles from './Header.module.css';
 import logo from '../../img/logo-white.png';
 import { getUser } from '../../services/userAPI';
@@ -34,6 +35,37 @@ class Header extends React.Component {
             </span>
           </div>
         </div>
+        <nav>
+          <ul className={ styles.nav_list }>
+            <li className={ styles.list_item }>
+              <NavLink
+                to="/search"
+                data-testid="link-to-search"
+                className={ (isActive) => (isActive ? styles.active : styles.inactive) }
+              >
+                Pesquisar
+              </NavLink>
+            </li>
+            <li className={ styles.list_item }>
+              <NavLink
+                to="/favorites"
+                data-testid="link-to-favorites"
+                className={ (isActive) => (isActive ? styles.active : styles.inactive) }
+              >
+                Favoritas
+              </NavLink>
+            </li>
+            <li className={ styles.list_item }>
+              <NavLink
+                to="/profile"
+                data-testid="link-to-profile"
+                className={ (isActive) => (isActive ? styles.active : styles.inactive) }
+              >
+                Perfil
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
       </header>
     );
   }
