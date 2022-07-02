@@ -11,3 +11,7 @@
   border-radius: 3px;
   padding: 2em 3em;
 }
+
+.main form input {
+  margin-bottom: 1em;
+}

@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.main form {
+  align-items: center;
+  align-self: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 2em;
+}

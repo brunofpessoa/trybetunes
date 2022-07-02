@@ -1,7 +1,6 @@
 .form_control {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1em;
 }
 
 .form_control label {
