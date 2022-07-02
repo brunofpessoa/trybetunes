@@ -1,8 +1,11 @@
 import React from 'react';
+import Header from '../../components/Header/Header';
 
 function Album() {
   return (
-    <div data-testid="page-album">Album page</div>
+    <div data-testid="page-album">
+      <Header />
+    </div>
   );
 }
 

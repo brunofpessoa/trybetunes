@@ -4,7 +4,7 @@ import SubmitButton from '../../components/Form/Button';
 import Input from '../../components/Form/Input';
 import Loading from '../../components/Loading/Loading';
 import styles from './Login.module.css';
-import login from './login.png';
+import logo from '../../img/logo.png';
 import { createUser } from '../../services/userAPI';
 
 class Login extends React.Component {
@@ -40,7 +40,7 @@ class Login extends React.Component {
 
     return loading ? <Loading /> : (
       <div data-testid="page-login" className={ styles.main }>
-        <img src={ login } alt="Trybetunes" />
+        <img src={ logo } alt="Trybetunes" />
         <form className={ styles.form_control }>
           <Input
             type="text"

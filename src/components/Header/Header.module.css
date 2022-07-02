@@ -1,0 +1,31 @@
+.top_section {
+  align-items: center;
+  background-color: #023031;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+}
+
+.logo {
+  width: 100px;
+}
+
+.profile {
+  align-items: center;
+  background-color: white;
+  border-radius: 100px;
+  display: flex;
+  flex-grow: 0.05;
+  max-height: 30px;
+  padding: 0.5em;
+}
+
+.profile_name {
+  margin: auto;
+}
+
+.profile_image {
+  background-color: #2fc18c;
+  border-radius: 50%;
+  padding: 5px;
+}

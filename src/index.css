@@ -12,11 +12,11 @@ code {
     monospace;
 }
 
-.loading {
+/* .loading {
   align-items: center;
   display: flex;
   justify-content: center;
-}
+} */
 
 .main {
   display: flex;
