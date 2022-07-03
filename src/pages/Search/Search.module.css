@@ -1,6 +1,7 @@
 .main {
   display: flex;
   flex-direction: column;
+  gap: 3em;
 }
 
 .main form {
@@ -9,5 +10,4 @@
   display: flex;
   gap: 10px;
   justify-content: center;
-  margin-top: 2em;
 }

@@ -1,0 +1,48 @@
+.main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.albums {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2em;
+  justify-content: center;
+}
+
+.album {
+  background-color: #f0f2f5;
+  border-radius: 5px;
+  box-shadow: 0 0 1em grey;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 10px;
+}
+
+.album span {
+  max-height: 50px;
+  max-width: fit-content;
+  overflow: auto;
+}
+
+.album_artist {
+  color: rgb(86, 86, 86);
+  font-size: small;
+  height: 2.1em;
+}
+
+.album_name {
+  font-size: medium;
+  height: 2.5em;
+}
+
+.album img {
+  border-radius: 5px;
+  width: 150px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}

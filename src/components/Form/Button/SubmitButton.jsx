@@ -5,7 +5,7 @@ import styles from './SubmitButton.module.css';
 function SubmitButton({ text, handleClick, testId, disabled }) {
   return (
     <button
-      type="button"
+      type="submit"
       className={ styles.btn }
       onClick={ handleClick }
       data-testid={ testId }

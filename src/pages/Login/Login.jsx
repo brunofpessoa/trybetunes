@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import SubmitButton from '../../components/Form/Button';
 import Input from '../../components/Form/Input';
-import Loading from '../../components/Loading/Loading';
+import Loading from '../../components/Loading';
 import styles from './Login.module.css';
 import logo from '../../img/logo.png';
 import { createUser } from '../../services/userAPI';
@@ -36,7 +36,7 @@ class Login extends React.Component {
   };
 
   render() {
-    const { loading } = this.state;
+    const { loading, loginName } = this.state;
 
     return loading ? <Loading /> : (
       <div data-testid="page-login" className={ styles.main }>
@@ -49,6 +49,7 @@ class Login extends React.Component {
             placeholder="Nome"
             handleOnChange={ this.handleChange }
             testId="login-name-input"
+            value={ loginName }
           />
           <SubmitButton
             text="Entrar"

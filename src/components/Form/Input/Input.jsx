@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Input.module.css';
 
-function Input({ type, text, name, placeholder, handleOnChange, testId }) {
+function Input(props) {
+  const { type, text, name, placeholder, handleOnChange, testId, value } = props;
   return (
     <div className={ styles.form_control }>
-      {text && <label htmlFor={ name }>{`${text}:`}</label>}
+      {text && <label htmlFor={ name }>{text}</label>}
       <input
         type={ type }
         name={ name }
@@ -13,6 +14,7 @@ function Input({ type, text, name, placeholder, handleOnChange, testId }) {
         data-testid={ testId }
         placeholder={ placeholder }
         onChange={ handleOnChange }
+        value={ value }
       />
     </div>
   );
@@ -20,6 +22,7 @@ function Input({ type, text, name, placeholder, handleOnChange, testId }) {
 
 Input.propTypes = {
   type: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
   text: PropTypes.string,
   name: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
