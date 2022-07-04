@@ -1,0 +1,12 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.main span {
+  max-width: 300px;
+  overflow: auto;
+  white-space: nowrap;
+}
