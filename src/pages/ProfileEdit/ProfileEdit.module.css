@@ -1,0 +1,18 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.form {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  min-width: 300px;
+}
+
+.form p {
+  font-weight: 700;
+  text-align: center;
+}

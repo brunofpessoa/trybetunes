@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.main {
+  align-self: center;
+}
+
+.title {
+  text-align: center;
+}

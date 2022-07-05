@@ -39,7 +39,7 @@ class Album extends React.Component {
   render() {
     const { albumInfo, songs, loading, favoriteSongs } = this.state;
     return loading ? <Loading /> : (
-      <div data-testid="page-album">
+      <div data-testid="page-album" className={ styles.container }>
         <Header />
         <main className={ styles.main }>
           <section className={ styles.album_info }>

@@ -41,25 +41,28 @@ class MusicCard extends React.Component {
     return loading ? <Loading /> : (
       <div className={ styles.main }>
         <span>{ trackName }</span>
-        <audio data-testid="audio-component" src={ previewUrl } controls>
-          <track kind="captions" />
-          O seu navegador não suporta o elemento
-          {' '}
-          <code>audio</code>
-          .
-        </audio>
-        <label htmlFor="favorite">
-          Favorita
-          <input
-            id="favorite"
-            type="checkbox"
-            data-testid={ `checkbox-music-${trackId}` }
-            onChange={ () => {
-              this.handleFavorite();
-            } }
-            checked={ isFavorite }
-          />
-        </label>
+        <div className={ styles.audio }>
+          <audio data-testid="audio-component" src={ previewUrl } controls>
+            <track kind="captions" />
+            O seu navegador não suporta o elemento
+            {' '}
+            <code>audio</code>
+            .
+          </audio>
+          <label htmlFor={ `favorite-${trackId}` }>
+            Favorita
+            <input
+              id={ `favorite-${trackId}` }
+              type="checkbox"
+              data-testid={ `checkbox-music-${trackId}` }
+              onChange={ () => {
+                this.handleFavorite();
+              } }
+              checked={ isFavorite }
+            />
+            <hr />
+          </label>
+        </div>
       </div>
     );
   }

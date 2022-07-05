@@ -3,6 +3,7 @@ import Loading from '../../components/Loading';
 import MusicCard from '../../components/MusicCard';
 import { getFavoriteSongs } from '../../services/favoriteSongsAPI';
 import Header from '../../components/Header';
+import styles from './Favorite.module.css';
 
 class Favorites extends React.Component {
   constructor() {
@@ -29,9 +30,10 @@ class Favorites extends React.Component {
     const { loading, favorites } = this.state;
 
     return loading ? <Loading /> : (
-      <div data-testid="page-favorites">
+      <div data-testid="page-favorites" className={ styles.container }>
         <Header />
-        <main>
+        <main className={ styles.main }>
+          <h3 className={ styles.title }>Favoritas</h3>
           {
             favorites.map((song) => (
               <MusicCard

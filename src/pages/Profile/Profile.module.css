@@ -6,10 +6,12 @@
 
 .profile {
   align-self: center;
-  max-width: 300px;
+  max-width: 500px;
+  min-width: 300px;
+  padding: 20px;
 }
 
-.main img {
+.image {
   border-radius: 50%;
   height: 100px;
   object-fit: cover;
@@ -44,4 +46,11 @@
 
 .edit a:hover {
   transform: scale(1.1);
+}
+
+.profile_image {
+  border: 1px solid grey;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
 }

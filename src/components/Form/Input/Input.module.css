@@ -9,8 +9,9 @@
 }
 
 .form_control input {
-  border: 1px solid #7b7b7b;
-  border-radius: 3px;
+  border: none;
+  border-bottom: 1px solid #7b7b7b;
+  border-radius: 0;
   padding: 0.7em;
 }
 
