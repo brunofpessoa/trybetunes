@@ -4,6 +4,8 @@ import Header from '../../components/Header/Header';
 import MusicCard from '../../components/MusicCard';
 import getMusics from '../../services/musicsAPI';
 import styles from './Album.module.css';
+import { getFavoriteSongs } from '../../services/favoriteSongsAPI';
+import Loading from '../../components/Loading';
 
 class Album extends React.Component {
   constructor() {
@@ -12,24 +14,32 @@ class Album extends React.Component {
     this.state = {
       albumInfo: {},
       songs: [],
+      favoriteSongs: [],
+      loading: true,
     };
   }
 
   setSongs = async () => {
     const { match: { params: { id } } } = this.props;
     const data = await getMusics(id);
-    const albumInfo = data[0];
-    const songs = data.slice(1);
+    const [albumInfo, ...songs] = data;
     this.setState({ albumInfo, songs });
   };
 
   componentDidMount = async () => {
     this.setSongs();
+    this.handleFavorites();
   }
 
+  handleFavorites = async () => {
+    const favoriteSongs = await getFavoriteSongs();
+    this.setState({ loading: false, favoriteSongs });
+  };
+
   render() {
-    const { albumInfo, songs } = this.state;
-    return (
+    const { albumInfo, songs, loading, favoriteSongs } = this.state;
+    console.log(favoriteSongs);
+    return loading ? <Loading /> : (
       <div data-testid="page-album">
         <Header />
         <main className={ styles.main }>
@@ -47,6 +57,7 @@ class Album extends React.Component {
                   trackName={ song.trackName }
                   previewUrl={ song.previewUrl }
                   trackId={ song.trackId }
+                  favorite={ favoriteSongs.some((e) => e.trackId === song.trackId) }
                 />
               ))
             }
