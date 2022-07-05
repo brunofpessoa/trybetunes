@@ -1,0 +1,47 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+}
+
+.profile {
+  align-self: center;
+  max-width: 300px;
+}
+
+.main img {
+  border-radius: 50%;
+  height: 100px;
+  object-fit: cover;
+  width: 100px;
+}
+
+.main span {
+  font-weight: 700;
+}
+
+.main p {
+  color: #515151;
+  max-height: 100px;
+  overflow: auto;
+}
+
+.edit {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.edit a {
+  background-color: #036b52;
+  border-radius: 3px;
+  color: white;
+  font-weight: 700;
+  padding: 5px;
+  transition: 0.2s;
+}
+
+.edit a:hover {
+  transform: scale(1.1);
+}
