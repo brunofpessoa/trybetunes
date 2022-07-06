@@ -42,10 +42,12 @@ class Album extends React.Component {
       <div data-testid="page-album" className={ styles.container }>
         <Header />
         <main className={ styles.main }>
-          <section className={ styles.album_info }>
+          <section className={ styles.album_info_container }>
             <img src={ albumInfo.artworkUrl100 } alt={ albumInfo.collectionName } />
-            <span data-testid="artist-name">{albumInfo.artistName}</span>
-            <span data-testid="album-name">{ albumInfo.collectionName }</span>
+            <div className={ styles.album_info }>
+              <span data-testid="artist-name">{albumInfo.artistName}</span>
+              <span data-testid="album-name">{ albumInfo.collectionName }</span>
+            </div>
           </section>
           <section className={ styles.song_list }>
             {

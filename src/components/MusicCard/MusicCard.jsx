@@ -60,7 +60,6 @@ class MusicCard extends React.Component {
               } }
               checked={ isFavorite }
             />
-            <hr />
           </label>
         </div>
       </div>

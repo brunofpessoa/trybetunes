@@ -1,18 +1,28 @@
 .main {
+  align-items: center;
+  background-color: #023031;
+  border-radius: 10px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 5px;
-  padding: 20px;
+  justify-content: space-between;
+  padding: 10px;
 }
 
 .main span {
-  max-width: 300px;
+  color: white;
+  font-weight: 700;
+  height: 40px;
   overflow: auto;
-  white-space: nowrap;
 }
 
 .audio {
+  align-items: center;
   display: flex;
-  flex-flow: column;
+  flex-wrap: wrap;
   gap: 5px;
+}
+
+.main label {
+  color: white;
 }

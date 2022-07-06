@@ -18,7 +18,7 @@
   display: flex;
   flex-flow: column wrap;
   padding: 10px;
-  width: 170px;
+  width: 150px;
 }
 
 .album span {
@@ -34,6 +34,7 @@
 }
 
 .album_name {
+  color: #2fc18c;
   font-size: medium;
   height: 2.5em;
 }
