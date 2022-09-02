@@ -9,9 +9,13 @@ Neste projeto nos foi fornecido pela Trybe algumas funções para agilizar o des
 
 <details>
 <summary>Veja Aplicação em funcionamento</summary>
+
 ![página de login](./images/preview_0.png)
+
 ![página de albums](./images/preview_1.png)
+
 ![página de favoritos](./images/preview_2.png)
+
 ![página de edição](./images/preview_3.png)
 </details>
 
