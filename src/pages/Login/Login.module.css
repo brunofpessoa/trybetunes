@@ -1,15 +1,16 @@
 .main {
   align-items: center;
-  border-radius: 3px;
+  border: 3px solid var(--theme);
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 1em;
-}
-
-.main form {
-  border: 1px solid #7b7b7b;
-  border-radius: 3px;
-  padding: 2em 3em;
+  left: 50%;
+  max-width: fit-content;
+  padding: var(--padding);
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .main form input {

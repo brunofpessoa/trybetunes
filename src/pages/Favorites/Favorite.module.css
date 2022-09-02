@@ -2,7 +2,7 @@
   align-self: center;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: calc(var(--gap) / 2);
   padding: 1em;
 }
 

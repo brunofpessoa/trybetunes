@@ -2,6 +2,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  gap: var(--gap);
 }
 
 .albums {
@@ -12,39 +13,47 @@
 }
 
 .album {
-  background-color: #f0f2f5;
+  background-color: var(--bg-color);
   border-radius: 5px;
-  box-shadow: 0 0 1em grey;
+  box-shadow: 0 5px 1em var(--shadow-color);
   display: flex;
   flex-flow: column wrap;
-  padding: 10px;
-  width: 150px;
+  gap: calc(var(--gap) / 2);
+  padding: calc(var(--padding) / 2);
+  width: calc(var(--padding) + var(--cardSize));
+
 }
 
 .album span {
   max-height: 50px;
   max-width: fit-content;
-  overflow: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
 }
 
 .album_artist {
-  color: rgb(86, 86, 86);
+  color: var(--secondary-text-color);
   font-size: small;
   height: 2.1em;
 }
 
 .album_name {
-  color: #2fc18c;
+  color: var(--theme);
   font-size: medium;
-  height: 2.5em;
 }
 
 .album img {
   border-radius: 5px;
-  height: 150px;
+  height: var(--cardSize);
+
+  /* height: 150px; */
+  width: var(--cardSize);
+
 }
 
 a {
-  color: black;
+  color: var(--secondary-text-color);
   text-decoration: none;
 }

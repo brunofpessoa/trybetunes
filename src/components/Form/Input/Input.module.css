@@ -1,6 +1,7 @@
 .form_control {
   display: flex;
   flex-direction: column;
+
 }
 
 .form_control label {
@@ -9,12 +10,19 @@
 }
 
 .form_control input {
+  background-color: var(--bg-color);
   border: none;
-  border-bottom: 1px solid #7b7b7b;
+  border-bottom: 1px solid var(--primary-text-color);
   border-radius: 0;
   padding: 0.7em;
 }
 
-.form_control input::placeholder {
-  color: #7b7b7b;
+input:-webkit-autofill, input:-webkit-autofill:hover {
+  -webkit-text-fill-color: white;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input:-webkit-autofill:focus, input:-webkit-autofill:active {
+  -webkit-text-fill-color: white;
+  transition: background-color 5000s ease-in-out 0s;
 }

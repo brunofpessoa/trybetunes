@@ -1,18 +1,16 @@
 .main {
   align-items: center;
-  background-color: #023031;
+  background-color: var(--secondary-color);
   border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: calc(var(--gap) / 2);
   justify-content: space-between;
-  padding: 10px;
+  padding: calc(var(--padding) / 2);
 }
 
 .main span {
-  color: white;
-  font-weight: 700;
-  height: 40px;
+  color: var(--primary-text-color);
   overflow: auto;
 }
 
@@ -20,9 +18,9 @@
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: calc(var(--gap) / 2);
 }
 
 .main label {
-  color: white;
+  color: var(--primary-text-color);
 }

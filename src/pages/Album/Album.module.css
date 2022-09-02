@@ -13,8 +13,8 @@
   align-items: flex-end;
   display: flex;
   flex-direction: row;
-  gap: 10px;
-  padding: 20px;
+  gap: var(--gap);
+  padding: var(--padding);
 }
 
 .album_info {
@@ -31,5 +31,5 @@
 .song_list {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: calc(var(--gap) / 2);
 }

@@ -1,6 +1,6 @@
 .top_section {
   align-items: center;
-  background-color: #023031;
+  background-color: var(--primary-color);
   display: flex;
   justify-content: space-between;
   padding: 0.5em 1em;
@@ -12,20 +12,21 @@
 
 .profile {
   align-items: center;
-  background-color: white;
+  background-color: var(--bg-color);
   border-radius: 100px;
   display: flex;
   flex-grow: 0.05;
+  justify-content: center;
   max-height: 30px;
-  padding: 0.5em;
+  padding: calc(var(--padding) / 1.5);
 }
 
 .profile_name {
-  margin: auto;
+  margin-left: auto;
 }
 
 .profile_image {
-  background-color: #2fc18c;
+  background-color: var(--theme);
   border-radius: 50%;
   padding: 5px;
 }
@@ -33,7 +34,7 @@
 .nav_list {
   display: flex;
   flex-direction: row;
-  gap: 5px;
+  gap: calc(var(--gap) / 2);
   justify-content: space-around;
   margin: 0;
   padding: 0;
@@ -48,19 +49,19 @@
 .list_item a {
   display: block;
   font-weight: 700;
-  padding: 10px;
+  padding: calc(var(--padding) / 2);
   text-decoration: none;
 }
 
 .inactive {
-  background-color: #f0f2f5;
-  box-shadow: 0 2px 5px grey;
-  color: #2fc18c;
+  background-color: var(--secondary-color);
+  box-shadow: 0 2px 2px var(--theme);
+  color: var(--theme);
   padding: 100px;
 }
 
 .active {
-  background-color: #036b52;
-  box-shadow: 0 2px 5px #2fc18c;
-  color: white;
+  background-color: var(--primary-color);
+  box-shadow: 0 5px 4px var(--theme);
+  color: var(--primary-text-color);
 }

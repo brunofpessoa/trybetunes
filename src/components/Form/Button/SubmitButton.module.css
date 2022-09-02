@@ -1,8 +1,8 @@
 .btn {
-  background-color: #222;
+  background-color: var(--shadow-color);
   border: none;
   border-radius: 3px;
-  color: white;
+  color: var(--primary-text-color);
   cursor: pointer;
   padding: 0.7em 1.2em;
   text-decoration: none;
@@ -11,9 +11,10 @@
 }
 
 .btn:disabled {
-  background-color: grey;
+  background-color: var(--secondary-color);
+
 }
 
 .btn:enabled:hover {
-  color: #2fc18c;
+  color: var(--theme);
 }

@@ -8,6 +8,6 @@
   align-items: center;
   align-self: center;
   display: flex;
-  gap: 10px;
+  gap: var(--gap);
   justify-content: center;
 }

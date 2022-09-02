@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import styles from './MusicCard.module.css';
 import Loading from '../Loading';
 import { addSong, removeSong } from '../../services/favoriteSongsAPI';
+import whiteHeartIcon from '../../img/whiteHeartIcon.svg';
+import redHeartIcon from '../../img/redHeartIcon.svg';
 
 class MusicCard extends React.Component {
   constructor() {
@@ -50,14 +52,14 @@ class MusicCard extends React.Component {
             .
           </audio>
           <label htmlFor={ `favorite-${trackId}` }>
-            Favorita
+            { isFavorite
+              ? <img className="heart" src={ redHeartIcon } alt="filled heart" />
+              : <img className="heart" src={ whiteHeartIcon } alt="empty heart" />}
             <input
               id={ `favorite-${trackId}` }
               type="checkbox"
               data-testid={ `checkbox-music-${trackId}` }
-              onChange={ () => {
-                this.handleFavorite();
-              } }
+              onChange={ this.handleFavorite }
               checked={ isFavorite }
             />
           </label>

@@ -38,15 +38,17 @@ class Profile extends React.Component {
               )}
               <Link to="/profile/edit">Editar perfil</Link>
             </div>
-            <span>Nome:</span>
-            <p>{name}</p>
-            <hr />
-            <span>E-mail:</span>
-            <p>{email}</p>
-            <hr />
-            <span>Descrição:</span>
-            <p>{description}</p>
-            <hr />
+            <div className={ styles.infoContainer }>
+              <span>Nome:</span>
+              <p>{name}</p>
+              <hr />
+              <span>E-mail:</span>
+              <p>{email}</p>
+              <hr />
+              <span>Descrição:</span>
+              <p>{description}</p>
+              <hr />
+            </div>
           </main>
         )}
       </div>
