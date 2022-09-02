@@ -34,7 +34,7 @@
 }
 
 .album_artist {
-  color: var(--secondary-text-color);
+  color: var(--primary-text-color);
   font-size: small;
   height: 2.1em;
 }
@@ -54,6 +54,6 @@
 }
 
 a {
-  color: var(--secondary-text-color);
+  color: var(--primary-text-color);
   text-decoration: none;
 }
