@@ -53,5 +53,6 @@
 }
 
 .infoContainer p {
-  padding: var(--padding) 0;
+  color: var(--theme);
+  padding: calc(var(--padding) / 2) 0;
 }
