@@ -30,7 +30,7 @@
 
   --title-font: 'Montserrat' , sans-serif;
 
-  --medium-font-size: clamp(16px, 0.3rem + 1vw, 40px);
+  --medium-font-size: clamp(16px, calc(0.3rem + 1vw), 40px);
 
   --gap: clamp(10px, 1.5vw, 40px);
 
