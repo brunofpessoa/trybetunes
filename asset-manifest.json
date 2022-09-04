@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/trybetunes/static/css/main.2f169fd8.chunk.css",
-    "main.js": "/trybetunes/static/js/main.d21701ba.chunk.js",
-    "main.js.map": "/trybetunes/static/js/main.d21701ba.chunk.js.map",
-    "runtime-main.js": "/trybetunes/static/js/runtime-main.80235779.js",
-    "runtime-main.js.map": "/trybetunes/static/js/runtime-main.80235779.js.map",
-    "static/js/2.fc4eeece.chunk.js": "/trybetunes/static/js/2.fc4eeece.chunk.js",
-    "static/js/2.fc4eeece.chunk.js.map": "/trybetunes/static/js/2.fc4eeece.chunk.js.map",
-    "index.html": "/trybetunes/index.html",
-    "static/css/main.2f169fd8.chunk.css.map": "/trybetunes/static/css/main.2f169fd8.chunk.css.map",
-    "static/js/2.fc4eeece.chunk.js.LICENSE.txt": "/trybetunes/static/js/2.fc4eeece.chunk.js.LICENSE.txt",
-    "static/media/logo-white.0671366a.png": "/trybetunes/static/media/logo-white.0671366a.png",
-    "static/media/logo.7a3c37e5.png": "/trybetunes/static/media/logo.7a3c37e5.png",
-    "static/media/redHeartIcon.db5f2c5f.svg": "/trybetunes/static/media/redHeartIcon.db5f2c5f.svg",
-    "static/media/whiteHeartIcon.2b822118.svg": "/trybetunes/static/media/whiteHeartIcon.2b822118.svg"
+    "main.css": "/static/css/main.2f169fd8.chunk.css",
+    "main.js": "/static/js/main.d21701ba.chunk.js",
+    "main.js.map": "/static/js/main.d21701ba.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.89d2d065.js",
+    "runtime-main.js.map": "/static/js/runtime-main.89d2d065.js.map",
+    "static/js/2.fc4eeece.chunk.js": "/static/js/2.fc4eeece.chunk.js",
+    "static/js/2.fc4eeece.chunk.js.map": "/static/js/2.fc4eeece.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.2f169fd8.chunk.css.map": "/static/css/main.2f169fd8.chunk.css.map",
+    "static/js/2.fc4eeece.chunk.js.LICENSE.txt": "/static/js/2.fc4eeece.chunk.js.LICENSE.txt",
+    "static/media/logo-white.0671366a.png": "/static/media/logo-white.0671366a.png",
+    "static/media/logo.7a3c37e5.png": "/static/media/logo.7a3c37e5.png",
+    "static/media/redHeartIcon.db5f2c5f.svg": "/static/media/redHeartIcon.db5f2c5f.svg",
+    "static/media/whiteHeartIcon.2b822118.svg": "/static/media/whiteHeartIcon.2b822118.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.80235779.js",
+    "static/js/runtime-main.89d2d065.js",
     "static/js/2.fc4eeece.chunk.js",
     "static/css/main.2f169fd8.chunk.css",
     "static/js/main.d21701ba.chunk.js"
