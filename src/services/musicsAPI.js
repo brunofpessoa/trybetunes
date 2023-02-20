@@ -1,7 +1,12 @@
 const getMusics = async (id) => {
-  const request = await fetch(`https://itunes.apple.com/lookup?id=${id}&entity=song`);
-  const requestJson = await request.json();
-  return requestJson.results;
+  try {
+    const request = await fetch(`https://itunes.apple.com/lookup?id=${id}&entity=song`);
+    const requestJson = await request.json();
+    return requestJson.results;
+  } catch (err) {
+    console.error(err.message);
+    return [];
+  }
 };
 
 export default getMusics;

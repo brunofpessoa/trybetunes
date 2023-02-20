@@ -6,14 +6,10 @@ import Header from '../../components/Header';
 import styles from './Favorite.module.css';
 
 class Favorites extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      favorites: [],
-      loading: true,
-    };
-  }
+  state = {
+    favorites: [],
+    loading: true,
+  };
 
   componentDidMount = async () => {
     const favoriteSongs = await getFavoriteSongs();
@@ -35,17 +31,21 @@ class Favorites extends React.Component {
         <main className={ styles.main }>
           <h3 className={ styles.title }>Favoritas</h3>
           {
-            favorites.map((song) => (
-              <MusicCard
-                key={ song.trackId }
-                song={ song }
-                trackName={ song.trackName }
-                previewUrl={ song.previewUrl }
-                trackId={ song.trackId }
-                favorite={ favorites.some((e) => e.trackId === song.trackId) }
-                updateFavorites={ this.updateFavorites }
-              />
-            ))
+            favorites.length < 1
+              ? <p>Você ainda não possui músicas favoritas.</p>
+              : favorites.map((song) => (
+                <MusicCard
+                  key={ song.trackId }
+                  song={ song }
+                  trackName={ song.trackName }
+                  previewUrl={ song.previewUrl }
+                  trackId={ song.trackId }
+                  artWork={ song.artworkUrl60 }
+                  collectionName={ song.collectionName }
+                  favorite={ favorites.some((e) => e.trackId === song.trackId) }
+                  updateFavorites={ this.updateFavorites }
+                />
+              ))
           }
         </main>
       </div>

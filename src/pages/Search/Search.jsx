@@ -7,15 +7,27 @@ import searchAlbumsAPI from '../../services/searchAlbumsAPI';
 import Albums from '../../components/Albums';
 
 class Search extends React.Component {
-  constructor() {
-    super();
+  state = {
+    searchFor: 'dream theater',
+    loading: false,
+    searchResult: [],
+    shouldUpdateAlbums: false,
+  };
 
-    this.state = {
-      searchFor: '',
+  componentDidMount() {
+    this.getSongs();
+  }
+
+  getSongs = async () => {
+    const { searchFor } = this.state;
+    this.setState({ loading: true });
+    const result = await searchAlbumsAPI(searchFor);
+    result.shift();
+    this.setState({
+      searchResult: result,
       loading: false,
-      searchResult: [],
-      shouldUpdateAlbums: false,
-    };
+      shouldUpdateAlbums: true,
+    });
   }
 
   handleChange = ({ target }) => {
@@ -30,10 +42,7 @@ class Search extends React.Component {
 
   handleClick = async (event) => {
     event.preventDefault();
-    const { searchFor } = this.state;
-    this.setState({ loading: true });
-    const result = await searchAlbumsAPI(searchFor);
-    this.setState({ searchResult: result, loading: false, shouldUpdateAlbums: true });
+    this.getSongs();
   };
 
   disableAlbumsUpdate = () => {

@@ -2,21 +2,25 @@ import React from 'react';
 import { FaUser } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 import styles from './Header.module.css';
-import logo from '../../img/logo-white.png';
-import { getUser } from '../../services/userAPI';
+import logo from '../../img/logo.png';
+import { getUser, createUser } from '../../services/userAPI';
 import Loading from '../Loading';
 
 class Header extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      user: '',
-    };
-  }
+  state = {
+    user: '',
+  };
 
   componentDidMount = async () => {
+    this.createFakeUser();
     const user = await getUser();
     this.setState({ user });
+  }
+
+  createFakeUser = async () => {
+    if (!localStorage.getItem('user')) {
+      await createUser({ name: 'visitante' });
+    }
   }
 
   render() {

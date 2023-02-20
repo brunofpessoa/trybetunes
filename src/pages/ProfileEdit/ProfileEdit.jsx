@@ -8,13 +8,10 @@ import SubmitButton from '../../components/Form/Button';
 import styles from './ProfileEdit.module.css';
 
 class ProfileEdit extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      user: {},
-      loading: true,
-    };
-  }
+  state = {
+    user: {},
+    loading: true,
+  };
 
   componentDidMount = async () => {
     const user = await getUser();

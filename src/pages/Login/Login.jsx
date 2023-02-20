@@ -8,14 +8,10 @@ import logo from '../../img/logo.png';
 import { createUser } from '../../services/userAPI';
 
 class Login extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      loginName: '',
-      loading: false,
-    };
-  }
+  state = {
+    loginName: '',
+    loading: false,
+  };
 
   handleChange = ({ target }) => {
     this.setState({ loginName: target.value });

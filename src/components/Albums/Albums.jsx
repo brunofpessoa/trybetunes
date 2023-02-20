@@ -19,7 +19,12 @@ class Albums extends React.Component {
     return (
       loading ? <Loading /> : (
         <div className={ styles.main }>
-          {searchFor && <p>{`Resultado de álbuns de: ${searchFor}`}</p>}
+          {searchFor && (
+            <p>
+              Resultado de álbuns de:
+              {' '}
+              <span className={ styles.theme }>{searchFor}</span>
+            </p>)}
           {
             albums.length > 0 ? (
               <div className={ styles.albums }>
@@ -31,11 +36,20 @@ class Albums extends React.Component {
                       data-testid={ `link-to-album-${album.collectionId}` }
                     >
                       <div className={ styles.album }>
-                        <img src={ album.artworkUrl100 } alt={ album.artistName } />
-                        <span className={ styles.album_artist }>{album.artistName}</span>
-                        <span className={ styles.album_name }>
-                          {album.collectionName}
-                        </span>
+                        <img
+                          src={ album.artworkUrl100.replace('100x100bb', '592x592bb') }
+                          alt={ album.artistName }
+                        />
+                        <div className={ styles.description_section }>
+                          <span
+                            className={ styles.album_artist }
+                          >
+                            {album.artistName}
+                          </span>
+                          <span className={ styles.album_name }>
+                            {album.collectionName}
+                          </span>
+                        </div>
                       </div>
                     </Link>
                   ))

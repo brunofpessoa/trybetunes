@@ -7,13 +7,10 @@ import Loading from '../../components/Loading';
 import styles from './Profile.module.css';
 
 class Profile extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      user: {},
-      loading: true,
-    };
-  }
+  state = {
+    user: {},
+    loading: true,
+  };
 
   componentDidMount = async () => {
     const user = await getUser();
@@ -36,7 +33,7 @@ class Profile extends React.Component {
               /> : (
                 <FaUser className={ styles.profile_image } />
               )}
-              <Link to="/profile/edit">Editar perfil</Link>
+              <Link to="/profile/edit">Editar Perfil</Link>
             </div>
             <div className={ styles.infoContainer }>
               <span>Nome:</span>

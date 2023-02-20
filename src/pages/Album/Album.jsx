@@ -8,16 +8,12 @@ import { getFavoriteSongs } from '../../services/favoriteSongsAPI';
 import Loading from '../../components/Loading';
 
 class Album extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      albumInfo: {},
-      songs: [],
-      favoriteSongs: [],
-      loading: true,
-    };
-  }
+  state = {
+    albumInfo: {},
+    songs: [],
+    favoriteSongs: [],
+    loading: true,
+  };
 
   setSongs = async () => {
     const { match: { params: { id } } } = this.props;
@@ -41,29 +37,43 @@ class Album extends React.Component {
     return loading ? <Loading /> : (
       <div data-testid="page-album" className={ styles.container }>
         <Header />
-        <main className={ styles.main }>
-          <section className={ styles.album_info_container }>
-            <img src={ albumInfo.artworkUrl100 } alt={ albumInfo.collectionName } />
-            <div className={ styles.album_info }>
-              <span data-testid="artist-name">{albumInfo.artistName}</span>
-              <span data-testid="album-name">{ albumInfo.collectionName }</span>
-            </div>
-          </section>
-          <section className={ styles.song_list }>
-            {
-              songs.map((song) => (
-                <MusicCard
-                  key={ song.trackId }
-                  song={ song }
-                  trackName={ song.trackName }
-                  previewUrl={ song.previewUrl }
-                  trackId={ song.trackId }
-                  favorite={ favoriteSongs.some((e) => e.trackId === song.trackId) }
+        {
+          Object.keys(albumInfo).length > 0 && (
+            <main className={ styles.main }>
+              <section className={ styles.album_info_container }>
+                <img
+                  src={ albumInfo.artworkUrl100.replace('100x100bb', '592x592bb') }
+                  alt={ albumInfo.collectionName }
                 />
-              ))
-            }
-          </section>
-        </main>
+                <div className={ styles.album_info }>
+                  <span data-testid="artist-name">{albumInfo.artistName}</span>
+                  <span
+                    className={ styles.album_name }
+                    data-testid="album-name"
+                  >
+                    { albumInfo.collectionName }
+                  </span>
+                </div>
+              </section>
+              <section className={ styles.song_list }>
+                {
+                  songs.map((song) => (
+                    <MusicCard
+                      key={ song.trackId }
+                      song={ song }
+                      trackName={ song.trackName }
+                      previewUrl={ song.previewUrl }
+                      trackId={ song.trackId }
+                      favorite={ favoriteSongs.some((e) => e.trackId === song.trackId) }
+                      artWork={ albumInfo.artworkUrl60 }
+                      collectionName={ albumInfo.collectionName }
+                    />
+                  ))
+                }
+              </section>
+            </main>
+          )
+        }
       </div>
     );
   }
