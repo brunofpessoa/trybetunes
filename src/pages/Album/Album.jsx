@@ -80,7 +80,7 @@ class Album extends React.Component {
         )}
 
         {showError && (
-          <p className="txt-center">
+          <p className={ styles.txt_center }>
             Não foi possível acessar as informações desse álbum, por favor tente outro.
           </p>
         ) }

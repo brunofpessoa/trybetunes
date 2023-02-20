@@ -44,6 +44,6 @@
   gap: calc(var(--gap) / 2);
 }
 
-.txt-center {
+.txt_center {
   text-align: center;
 }
