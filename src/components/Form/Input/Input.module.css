@@ -11,9 +11,8 @@
 
 .form_control input {
   background-color: var(--bg-color);
-  border: none;
-  border-bottom: 1px solid var(--primary-text-color);
-  border-radius: 0;
+  border: 1px solid var(--primary-text-color);
+  border-radius: 3px;
   padding: 0.7em;
 }
 

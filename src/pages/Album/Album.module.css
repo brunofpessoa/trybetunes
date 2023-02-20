@@ -12,15 +12,25 @@
 .album_info_container {
   align-items: flex-end;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   gap: var(--gap);
   padding: var(--padding);
+}
+
+.album_info_container img {
+  width: var(--cardSize);
+  border-radius: 5px;
 }
 
 .album_info {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.album_name {
+  color: var(--theme);
 }
 
 .album_info img {

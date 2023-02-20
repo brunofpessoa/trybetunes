@@ -34,7 +34,6 @@
 .nav_list {
   display: flex;
   flex-direction: row;
-  gap: calc(var(--gap) / 2);
   justify-content: space-around;
   margin: 0;
   padding: 0;
@@ -51,17 +50,14 @@
   font-weight: 700;
   padding: calc(var(--padding) / 2);
   text-decoration: none;
+  color: var(--theme);
 }
 
 .inactive {
   background-color: var(--secondary-color);
-  box-shadow: 0 2px 2px var(--theme);
-  color: var(--theme);
   padding: 100px;
 }
 
 .active {
   background-color: var(--primary-color);
-  box-shadow: 0 5px 4px var(--theme);
-  color: var(--primary-text-color);
 }

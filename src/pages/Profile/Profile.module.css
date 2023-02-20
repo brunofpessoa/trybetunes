@@ -32,21 +32,16 @@
 }
 
 .edit a {
-  background-color: var(--primary-color);
-  border-radius: 5px;
-  color: var(--primary-text-color);
+  background-color: var(--theme);
+  border-radius: 3px;
+  color: black;
   font-weight: 700;
   margin-left: 20px;
   padding: 10px;
-  transition: 0.2s;
-}
-
-.edit a:hover {
-  transform: scale(1.1);
 }
 
 .profile_image {
-  border: 1px solid var(--shadow-color);
+  border: 1px solid var(--primary-text-color);
   border-radius: 50%;
   height: 100px;
   width: 100px;

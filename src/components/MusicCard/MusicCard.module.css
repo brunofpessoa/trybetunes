@@ -1,12 +1,19 @@
 .main {
-  align-items: center;
   background-color: var(--secondary-color);
   border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
-  gap: calc(var(--gap) / 2);
+  gap: var(--gap);
   justify-content: space-between;
   padding: calc(var(--padding) / 2);
+}
+
+.info {
+  align-self: flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .main span {
@@ -14,13 +21,27 @@
   overflow: auto;
 }
 
+.main img {
+  border-radius: 5px;
+}
+
 .audio {
   align-items: center;
+  justify-content: space-between;
   display: flex;
-  flex-wrap: wrap;
   gap: calc(var(--gap) / 2);
+}
+
+.audio input {
+  display: none;
 }
 
 .main label {
   color: var(--primary-text-color);
+}
+
+@media (max-width: 800px) {
+  .main {
+    flex-direction: column;
+  }
 }

@@ -5,6 +5,10 @@
   gap: var(--gap);
 }
 
+.theme {
+  color: var(--theme);
+}
+
 .albums {
   display: flex;
   flex-flow: row wrap;
@@ -15,13 +19,21 @@
 .album {
   background-color: var(--bg-color);
   border-radius: 5px;
-  box-shadow: 0 5px 1em var(--shadow-color);
+  box-shadow: var(--shadow-color) 0px 8px 24px;
   display: flex;
-  flex-flow: column wrap;
-  gap: calc(var(--gap) / 2);
-  padding: calc(var(--padding) / 2);
-  width: calc(var(--padding) + var(--cardSize));
+  flex-flow: column;
+  width: var(--cardSize);
+  transition: 0.4s;
+}
 
+.description_section {
+  display: flex;
+  flex-direction: column;
+  padding: calc(var(--padding) / 2);
+}
+
+.album:hover {
+  transform: scale(1.05);
 }
 
 .album span {
@@ -45,12 +57,9 @@
 }
 
 .album img {
-  border-radius: 5px;
+  border-radius: 5px 5px 0px 0px;
   height: var(--cardSize);
-
-  /* height: 150px; */
   width: var(--cardSize);
-
 }
 
 a {
