@@ -13,6 +13,7 @@ class Album extends React.Component {
     songs: [],
     favoriteSongs: [],
     loading: true,
+    showError: false,
   };
 
   setSongs = async () => {
@@ -21,6 +22,8 @@ class Album extends React.Component {
     if (data.length > 0) {
       const [albumInfo, ...songs] = data;
       this.setState({ albumInfo, songs });
+    } else {
+      this.setState({ showError: true });
     }
   };
 
@@ -35,51 +38,52 @@ class Album extends React.Component {
   };
 
   render() {
-    const { albumInfo, songs, loading, favoriteSongs } = this.state;
+    const { albumInfo, songs, loading, favoriteSongs, showError } = this.state;
     return loading ? <Loading /> : (
       <div data-testid="page-album" className={ styles.container }>
         <Header />
-        {
-          Object.keys(albumInfo).length > 0 ? (
-            <main className={ styles.main }>
-              <section className={ styles.album_info_container }>
-                <img
-                  src={ albumInfo.artworkUrl100.replace('100x100bb', '592x592bb') }
-                  alt={ albumInfo.collectionName }
-                />
-                <div className={ styles.album_info }>
-                  <span data-testid="artist-name">{albumInfo.artistName}</span>
-                  <span
-                    className={ styles.album_name }
-                    data-testid="album-name"
-                  >
-                    { albumInfo.collectionName }
-                  </span>
-                </div>
-              </section>
-              <section className={ styles.song_list }>
-                {
-                  songs.map((song) => (
-                    <MusicCard
-                      key={ song.trackId }
-                      song={ song }
-                      trackName={ song.trackName }
-                      previewUrl={ song.previewUrl }
-                      trackId={ song.trackId }
-                      favorite={ favoriteSongs.some((e) => e.trackId === song.trackId) }
-                      artWork={ albumInfo.artworkUrl60 }
-                      collectionName={ albumInfo.collectionName }
-                    />
-                  ))
-                }
-              </section>
-            </main>
-          ) : (
-            <p>
-              Não foi possível acessar as informações desse álbum, por favor tente outro.
-            </p>
-          )
-        }
+
+        {songs.length < 1 && (
+          <main className={ styles.main }>
+            <section className={ styles.album_info_container }>
+              <img
+                src={ albumInfo.artworkUrl100.replace('100x100bb', '592x592bb') }
+                alt={ albumInfo.collectionName }
+              />
+              <div className={ styles.album_info }>
+                <span data-testid="artist-name">{albumInfo.artistName}</span>
+                <span
+                  className={ styles.album_name }
+                  data-testid="album-name"
+                >
+                  { albumInfo.collectionName }
+                </span>
+              </div>
+            </section>
+            <section className={ styles.song_list }>
+              {
+                songs.map((song) => (
+                  <MusicCard
+                    key={ song.trackId }
+                    song={ song }
+                    trackName={ song.trackName }
+                    previewUrl={ song.previewUrl }
+                    trackId={ song.trackId }
+                    favorite={ favoriteSongs.some((e) => e.trackId === song.trackId) }
+                    artWork={ albumInfo.artworkUrl60 }
+                    collectionName={ albumInfo.collectionName }
+                  />
+                ))
+              }
+            </section>
+          </main>
+        )}
+
+        {showError && (
+          <p className="txt-center">
+            Não foi possível acessar as informações desse álbum, por favor tente outro.
+          </p>
+        ) }
       </div>
     );
   }

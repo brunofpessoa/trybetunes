@@ -43,3 +43,7 @@
   flex-direction: column;
   gap: calc(var(--gap) / 2);
 }
+
+.txt-center {
+  text-align: center;
+}
