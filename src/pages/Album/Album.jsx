@@ -43,7 +43,7 @@ class Album extends React.Component {
       <div data-testid="page-album" className={ styles.container }>
         <Header />
 
-        {songs.length < 1 && (
+        {songs.length > 0 && (
           <main className={ styles.main }>
             <section className={ styles.album_info_container }>
               <img
