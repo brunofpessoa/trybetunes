@@ -18,8 +18,10 @@ class Album extends React.Component {
   setSongs = async () => {
     const { match: { params: { id } } } = this.props;
     const data = await getMusics(id);
-    const [albumInfo, ...songs] = data;
-    this.setState({ albumInfo, songs });
+    if (data.length > 0) {
+      const [albumInfo, ...songs] = data;
+      this.setState({ albumInfo, songs });
+    }
   };
 
   componentDidMount = async () => {
@@ -38,7 +40,7 @@ class Album extends React.Component {
       <div data-testid="page-album" className={ styles.container }>
         <Header />
         {
-          Object.keys(albumInfo).length > 0 && (
+          Object.keys(albumInfo).length > 0 ? (
             <main className={ styles.main }>
               <section className={ styles.album_info_container }>
                 <img
@@ -72,6 +74,10 @@ class Album extends React.Component {
                 }
               </section>
             </main>
+          ) : (
+            <p>
+              Não foi possível acessar as informações desse álbum, por favor tente outro.
+            </p>
           )
         }
       </div>
